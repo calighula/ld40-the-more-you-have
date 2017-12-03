@@ -123,7 +123,7 @@ GameObject:
   - component: {fileID: 55271472}
   - component: {fileID: 55271471}
   m_Layer: 5
-  m_Name: Controls2
+  m_Name: ControlsMove
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -136,7 +136,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 55271469}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 22.899994, y: -69, z: 0}
+  m_LocalPosition: {x: 22.899994, y: -51.599976, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 478822355}
@@ -144,8 +144,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 22.9, y: -69}
-  m_SizeDelta: {x: -119.4, y: -502.1}
+  m_AnchoredPosition: {x: 22.900002, y: -51.59999}
+  m_SizeDelta: {x: -119.4, y: -379.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &55271471
 MonoBehaviour:
@@ -179,7 +179,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: '   Move : Left / Right keys'
+  m_Text: '   Movement : Left / Right arrow keys'
 --- !u!222 &55271472
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -271,7 +271,7 @@ GameObject:
   - component: {fileID: 543516792}
   - component: {fileID: 543516791}
   m_Layer: 5
-  m_Name: Controls1 (1)
+  m_Name: SpecialSkills
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -284,7 +284,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 543516789}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 22.900024, y: -112.150024, z: 0}
+  m_LocalPosition: {x: 22.899994, y: -86.21701, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 478822355}
@@ -292,8 +292,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 22.900024, y: -112.150024}
-  m_SizeDelta: {x: -119.400024, y: -500.7}
+  m_AnchoredPosition: {x: 22.900002, y: -86.217}
+  m_SizeDelta: {x: -119.4, y: -383.14}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &543516791
 MonoBehaviour:
@@ -459,10 +459,10 @@ MonoBehaviour:
   m_Script: {fileID: 1980459831, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 1024, y: 768}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
@@ -496,8 +496,8 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 871736300}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 520, y: 268, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 520, y: 210.5, z: 0}
+  m_LocalScale: {x: 1.015625, y: 1.015625, z: 1.015625}
   m_Children:
   - {fileID: 478822355}
   m_Father: {fileID: 0}
@@ -519,7 +519,7 @@ GameObject:
   - component: {fileID: 983862512}
   - component: {fileID: 983862511}
   m_Layer: 5
-  m_Name: Controls2 (1)
+  m_Name: ControlsSpecialSkills
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -532,7 +532,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 983862509}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 22.899994, y: -171, z: 0}
+  m_LocalPosition: {x: 22.899994, y: -141.62, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 478822355}
@@ -540,8 +540,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 22.9, y: -171}
-  m_SizeDelta: {x: -119.4, y: -453.6}
+  m_AnchoredPosition: {x: 22.9, y: -141.62}
+  m_SizeDelta: {x: -119.4, y: -335.1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &983862511
 MonoBehaviour:
@@ -606,7 +606,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1077219630}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 22.899994, y: 72.42503, z: 0}
+  m_LocalPosition: {x: 22.899994, y: 72, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 478822355}
@@ -614,8 +614,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 22.899994, y: 72.42502}
-  m_SizeDelta: {x: -119.4, y: -357.65}
+  m_AnchoredPosition: {x: 22.899994, y: 72}
+  m_SizeDelta: {x: -119.4, y: -300.7}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1077219632
 MonoBehaviour:
@@ -651,7 +651,7 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: '
 
-    The good God makes your life to always go up
+    God makes your life to always... grow, which is not always good
 
 
     Watch out your life bar to have the skills you need for progressing'
@@ -750,7 +750,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1289174269}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 22.900024, y: 200.74997, z: 0}
+  m_LocalPosition: {x: 22.899994, y: 168.06152, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 478822355}
@@ -758,7 +758,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 22.900024, y: -67.25003}
+  m_AnchoredPosition: {x: 22.899982, y: -39.200012}
   m_SizeDelta: {x: -119.400024, y: 78.399994}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1289174271
@@ -793,7 +793,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Life is not enough
+  m_Text: Unhealthy Dungeon
 --- !u!222 &1289174272
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -854,7 +854,7 @@ GameObject:
   - component: {fileID: 1361133468}
   - component: {fileID: 1361133467}
   m_Layer: 5
-  m_Name: Controls1
+  m_Name: Controls
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -867,7 +867,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1361133465}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 22.899994, y: -34.399994, z: 0}
+  m_LocalPosition: {x: 22.899994, y: -15.376999, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 478822355}
@@ -875,8 +875,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 22.9, y: -34.4}
-  m_SizeDelta: {x: -119.4, y: -500.7}
+  m_AnchoredPosition: {x: 22.900002, y: -15.377}
+  m_SizeDelta: {x: -119.4, y: -377}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1361133467
 MonoBehaviour:
