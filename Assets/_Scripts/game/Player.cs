@@ -13,6 +13,7 @@ public class Player : MonoBehaviour {
     public float jumpForce = 1;
     public float downwardsGravityMultiplier = 1;
     public float airMovementMultiplier = 0.6f;
+    public LayerMask groundDetection;
 
     [Header("Fire")]
     public Transform shootingGameObject;
@@ -34,6 +35,8 @@ public class Player : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+        // Check ground
+        IsOnGround();
 
         // Get Input keys
         float horizontal = Input.GetAxis("Horizontal");
@@ -126,26 +129,23 @@ public class Player : MonoBehaviour {
         lookingRight = !lookingRight;
     }
 
-    void OnTriggerEnter(Collider collision)
-    {
-        if (collision.CompareTag("Ground"))
-        {
-            OnGround = true;
-        }
-    }
-
-    void OnTriggerExit(Collider collision)
-    {
-        if (collision.CompareTag("Ground"))
-        {
-            OnGround = false;
-        }
-    }
-
     void Fire()
     {
         GameObject shot = Instantiate(fireGameObject, shootingGameObject.position, transform.rotation, bulletsParent) as GameObject;
         shot.GetComponent<Shot>().SetDirection(lookingRight ? 1.0f : -1.0f);
+    }
+
+    void IsOnGround()
+    {
+        Collider[] colliders = Physics.OverlapSphere(transform.position - Vector3.up, 0.1f, groundDetection);
+        if (colliders.Length > 0)
+        {
+            OnGround = true;
+        } else
+        {
+            OnGround = false;
+        }
+
     }
 
 }

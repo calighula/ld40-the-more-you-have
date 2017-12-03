@@ -4,7 +4,11 @@ using UnityEngine;
 
 public class GameController : SingletonType<GameController>
 {
+    public float timePerLevel = 10f;
+
     public GameObject player;
+
+    private UIController uiController;
 
     private int currentLevel = 4;
 
@@ -15,17 +19,23 @@ public class GameController : SingletonType<GameController>
         playerStartPosition = player.transform.position;
     }
 
+    public void RegisterUIController(UIController newUIController)
+    {
+        uiController = newUIController;
+        uiController.Init(timePerLevel);
+    }
+
     public void PlayerDamaged()
     {
         currentLevel--;
         if (currentLevel > 0)
         {
             // Reset the levels in the UI
-            UIController.Instance.SetCurrentLevel(currentLevel);
+            uiController.SetCurrentLevel(currentLevel);
         } else
         {
             // GAMEOVER
-            UIController.Instance.ShowGameOver();
+            uiController.ShowGameOver();
         }
     }
 
@@ -34,7 +44,7 @@ public class GameController : SingletonType<GameController>
         if (currentLevel < 4)
         {
             currentLevel++;
-            UIController.Instance.SetCurrentLevel(currentLevel);
+            uiController.SetCurrentLevel(currentLevel);
         }
     }
 
@@ -58,7 +68,7 @@ public class GameController : SingletonType<GameController>
         // Set current level
         currentLevel = 4;
         // Reset levels
-        UIController.Instance.ResetLevels();
+        uiController.ResetLevels();
         // Set player at the start position
         player.transform.position = playerStartPosition;
 

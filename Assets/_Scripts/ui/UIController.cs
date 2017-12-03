@@ -5,13 +5,13 @@ using UnityEngine.UI;
 
 public class UIController : SingletonType<UIController> {
 
-    public float timePerLevel = 10f;
-
-    public float currentTime = 0f;
-
     public Image[] levels;
 
     public GameObject gameOverPanel;
+
+    private float timePerLevel = 10f;
+
+    private float currentTime = 0f;
 
     private int currentLevel = MAX_LEVEL;
 
@@ -19,8 +19,14 @@ public class UIController : SingletonType<UIController> {
 
     private bool isGameRunning = true;
 
+    private void Start()
+    {
+        GameController.Instance.RegisterUIController(this);
+    }
+
     // Use this for initialization
-    void Start () {
+    public void Init (float newTimePerLevel) {
+        timePerLevel = newTimePerLevel;
         StartCoroutine(LifeWatchdog());
 	}
 
