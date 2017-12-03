@@ -136,7 +136,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 55271469}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 22.899994, y: -51.599976, z: 0}
+  m_LocalPosition: {x: 22.899994, y: -51.59999, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 478822355}
@@ -284,7 +284,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 543516789}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 22.899994, y: -86.21701, z: 0}
+  m_LocalPosition: {x: 22.899994, y: -86.216995, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 478822355}
@@ -496,7 +496,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 871736300}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 520, y: 210.5, z: 0}
+  m_LocalPosition: {x: 520, y: 238.5, z: 0}
   m_LocalScale: {x: 1.015625, y: 1.015625, z: 1.015625}
   m_Children:
   - {fileID: 478822355}
@@ -532,7 +532,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 983862509}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 22.899994, y: -141.62, z: 0}
+  m_LocalPosition: {x: 22.899994, y: -141.61998, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 478822355}
@@ -649,9 +649,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: '
-
-    God makes your life to always... grow, which is not always good
+  m_Text: 'God makes your life to always... grow, which is not always good
 
 
     Watch out your life bar to have the skills you need for progressing'
@@ -750,7 +748,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1289174269}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 22.899994, y: 168.06152, z: 0}
+  m_LocalPosition: {x: 22.899994, y: 195.63075, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 478822355}
