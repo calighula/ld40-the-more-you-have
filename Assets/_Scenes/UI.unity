@@ -1070,6 +1070,7 @@ MonoBehaviour:
   - {fileID: 2057010639}
   - {fileID: 1478611680}
   gameOverPanel: {fileID: 1444538762}
+  endMessage: {fileID: 528045200}
 --- !u!1 &1129984396
 GameObject:
   m_ObjectHideFlags: 0

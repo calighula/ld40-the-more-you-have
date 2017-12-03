@@ -35,7 +35,7 @@ public class GameController : SingletonType<GameController>
         } else
         {
             // GAMEOVER
-            uiController.ShowGameOver();
+            uiController.ShowGameOver(false);
             player.GetComponent<Player>().SetIsGameRunning(false);
         }
     }
@@ -78,14 +78,9 @@ public class GameController : SingletonType<GameController>
         // TODO: Enable all enemies
     }
 
-    public void Poison()
+    public void Win()
     {
-
-    }
-
-    public void Heal()
-    {
-
+        uiController.ShowGameOver(true);
     }
 
 }

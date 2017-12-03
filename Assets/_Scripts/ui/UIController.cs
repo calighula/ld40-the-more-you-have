@@ -9,6 +9,8 @@ public class UIController : SingletonType<UIController> {
 
     public GameObject gameOverPanel;
 
+    public Text endMessage;
+
     private float timePerLevel = 10f;
 
     private float currentTime = 0f;
@@ -45,7 +47,7 @@ public class UIController : SingletonType<UIController> {
         }
     }
 
-    public void ShowGameOver()
+    public void ShowGameOver(bool win)
     {
         isGameRunning = false;
         for (int i = 0; i < levels.Length; i++)
@@ -53,6 +55,11 @@ public class UIController : SingletonType<UIController> {
             levels[i].fillAmount = 0;
         }
         gameOverPanel.SetActive(true);
+
+        if (win)
+            endMessage.text = "Y O U   W I N ! ! !";
+        else
+            endMessage.text = "Game Over";
     }
 
     public void StartNewGame()

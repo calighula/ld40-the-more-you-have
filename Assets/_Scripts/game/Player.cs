@@ -23,6 +23,7 @@ public class Player : MonoBehaviour {
     // Internal variables
     private bool lookingRight = true;
     private bool OnGround = true;
+    private bool WallDetected = false;
     // Object references
     private Animator animator;
     private Rigidbody rb;
@@ -50,9 +51,6 @@ public class Player : MonoBehaviour {
         bool jump = Input.GetButtonDown("Jump");
         bool fire = Input.GetButtonDown("Fire1");
 
-        bool poison = Input.GetButtonDown("Poison");
-        bool heal = Input.GetButtonDown("Heal");
-
         float localAirMovementMultiplier = 1f;
         if (!OnGround)
         {
@@ -63,12 +61,19 @@ public class Player : MonoBehaviour {
         // Character movement - Horizontal
         if (horizontal > 0.1)
         {
-            transform.Translate(Vector3.right * horizontalSpeed * localAirMovementMultiplier * Time.deltaTime);
-
+            // Moving right
+            if (!(lookingRight && WallDetected))
+            {
+                transform.Translate(Vector3.right * horizontalSpeed * localAirMovementMultiplier * Time.deltaTime);
+            }
         }
         else if (horizontal < -0.1)
         {
-            transform.Translate(-Vector3.right * horizontalSpeed * localAirMovementMultiplier * Time.deltaTime);
+            // Moving left
+            if (!(!lookingRight && WallDetected))
+            {
+                transform.Translate(-Vector3.right * horizontalSpeed * localAirMovementMultiplier * Time.deltaTime);
+            }
         }
         if (animator)
         {
@@ -114,18 +119,6 @@ public class Player : MonoBehaviour {
             }
         }
 
-        // Drink a poison
-        if (poison)
-        {
-            GameController.Instance.Poison();
-        }
-
-        // Heal the player
-        if (heal)
-        {
-            GameController.Instance.Heal();
-        }
-
     }
 
     void Flip()
@@ -152,6 +145,23 @@ public class Player : MonoBehaviour {
         }
 
     }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("Ground"))
+        {
+            WallDetected = true;
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.CompareTag("Ground"))
+        {
+            WallDetected = false;
+        }
+    }
+
 
     public void SetIsGameRunning(bool enable)
     {
