@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 23180618821189628}
   m_Layer: 0
   m_Name: Sphere
-  m_TagString: Bullet
+  m_TagString: DartProjectile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -39,8 +39,8 @@ GameObject:
   - component: {fileID: 4025470276871380}
   - component: {fileID: 114810830161651666}
   m_Layer: 0
-  m_Name: Bullet
-  m_TagString: Bullet
+  m_Name: ArcherBullet
+  m_TagString: DartProjectile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

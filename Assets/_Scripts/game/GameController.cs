@@ -14,6 +14,10 @@ public class GameController : SingletonType<GameController>
 
     private Vector3 playerStartPosition;
 
+    private int hearts;
+
+    public GameObject[] respawnObjects;
+
     private void Start()
     {
         playerStartPosition = player.transform.position;
@@ -35,7 +39,7 @@ public class GameController : SingletonType<GameController>
         } else
         {
             // GAMEOVER
-            uiController.ShowGameOver(false);
+            uiController.ShowGameOver(false, 0);
             player.GetComponent<Player>().SetIsGameRunning(false);
         }
     }
@@ -74,13 +78,26 @@ public class GameController : SingletonType<GameController>
         player.transform.position = playerStartPosition;
         // Enable player input
         player.GetComponent<Player>().SetIsGameRunning(true);
+        // Reset number of hearts taken
+        hearts = 0;
         // Enable enemies
-        // TODO: Enable all enemies
+        if (respawnObjects != null)
+        {
+            for (int i = 0; i < respawnObjects.Length; i++)
+            {
+                respawnObjects[i].SetActive(true);
+            }
+        }
     }
 
     public void Win()
     {
-        uiController.ShowGameOver(true);
+        uiController.ShowGameOver(true, hearts);
+    }
+
+    public void AddHeart()
+    {
+        hearts++;
     }
 
 }

@@ -151,6 +151,10 @@ public class Player : MonoBehaviour {
         if (other.gameObject.CompareTag("Ground"))
         {
             WallDetected = true;
+        } else if (other.gameObject.CompareTag("DartProjectile"))
+        {
+            GameController.Instance.PlayerDamaged();
+            Destroy(other.gameObject);
         }
     }
 

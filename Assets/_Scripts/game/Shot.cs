@@ -21,4 +21,11 @@ public class Shot : MonoBehaviour {
         direction = newDirection;
         Destroy(gameObject, timeToDie);
     }
+
+    public void SetDartThrowSettings (float speed, float timeToDie, Vector3 directionV)
+    {
+        this.speed = speed;
+        this.timeToDie = timeToDie;
+        Destroy(gameObject, timeToDie);
+    }
 }

@@ -47,7 +47,7 @@ public class UIController : SingletonType<UIController> {
         }
     }
 
-    public void ShowGameOver(bool win)
+    public void ShowGameOver(bool win, int hearts)
     {
         isGameRunning = false;
         for (int i = 0; i < levels.Length; i++)
@@ -57,7 +57,7 @@ public class UIController : SingletonType<UIController> {
         gameOverPanel.SetActive(true);
 
         if (win)
-            endMessage.text = "Y O U   W I N ! ! !";
+            endMessage.text = "Y O U W I N \nHearts: " + hearts;
         else
             endMessage.text = "Game Over";
     }
