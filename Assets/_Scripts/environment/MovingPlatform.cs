@@ -10,8 +10,6 @@ public class MovingPlatform : MonoBehaviour {
 
     private float minDistance = 0.1f;
 
-    private int currentPosition = 0;
-
     private int nextPosition = 1;
 
 	// Update is called once per frame
@@ -20,7 +18,6 @@ public class MovingPlatform : MonoBehaviour {
         Vector3 distance = path[nextPosition] - transform.position;
         if (distance.magnitude < minDistance)
         {
-            currentPosition = nextPosition;
             nextPosition++;
             if (nextPosition >= path.Length)
             {

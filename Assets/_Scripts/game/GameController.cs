@@ -36,6 +36,7 @@ public class GameController : SingletonType<GameController>
         {
             // GAMEOVER
             uiController.ShowGameOver();
+            player.GetComponent<Player>().SetIsGameRunning(false);
         }
     }
 
@@ -71,7 +72,8 @@ public class GameController : SingletonType<GameController>
         uiController.ResetLevels();
         // Set player at the start position
         player.transform.position = playerStartPosition;
-
+        // Enable player input
+        player.GetComponent<Player>().SetIsGameRunning(true);
         // Enable enemies
         // TODO: Enable all enemies
     }

@@ -26,6 +26,7 @@ public class Player : MonoBehaviour {
     // Object references
     private Animator animator;
     private Rigidbody rb;
+    private bool isGameRunning = true;
 
     // Use this for initialization
     void Start () {
@@ -35,6 +36,10 @@ public class Player : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+
+        if (!isGameRunning)
+            return;
+
         // Check ground
         IsOnGround();
 
@@ -146,6 +151,11 @@ public class Player : MonoBehaviour {
             OnGround = false;
         }
 
+    }
+
+    public void SetIsGameRunning(bool enable)
+    {
+        isGameRunning = enable;
     }
 
 }
